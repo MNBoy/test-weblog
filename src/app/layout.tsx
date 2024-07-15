@@ -25,7 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={clsx(montserrat.className, 'min-h-dvh p-4')}>
+      <body
+        className={clsx(
+          montserrat.className,
+          'min-h-dvh max-w-screen-sm mx-auto py-10 px-4'
+        )}
+      >
+        <h1 className='text-2xl font-bold text-secondary'>overreacted</h1>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

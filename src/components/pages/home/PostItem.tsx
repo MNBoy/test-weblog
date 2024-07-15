@@ -11,7 +11,9 @@ export const PostItem: FC<IProps> = ({ body, id, title }) => {
         {Tools.capitalizeFirstLetter(title)}
       </h2>
       <span className='text-xs'>{Tools.createDate(id)}</span>
-      <p className='text-sm'>{body}</p>
+      <p className='text-sm'>
+        {body.slice(0, 60)} {body.length > 60 ? '...' : ''}
+      </p>
     </div>
   );
 };
