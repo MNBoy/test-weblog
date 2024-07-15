@@ -9,9 +9,20 @@ export interface IPost {
   body: string;
 }
 
+export interface IGetSinglePostRequest {
+  params: {
+    postId: number;
+  };
+}
+
 export const postApi = {
   getPosts: () => {
     const url = `${baseUrl}`;
     return Server.get<IPost[]>(url);
+  },
+
+  getSinglePost: ({ params }: IGetSinglePostRequest) => {
+    const url = `${baseUrl}/${params.postId}`;
+    return Server.get<IPost>(url);
   },
 };

@@ -7,6 +7,10 @@ body {
   color: #fff;
 }
 
+.gradient-text {
+  @apply bg-gradient-to-r from-primary to-primary/90 w-fit text-transparent bg-clip-text;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
