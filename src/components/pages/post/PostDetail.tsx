@@ -16,7 +16,7 @@ export const PostDetail: FC<IProps> = ({ postId }) => {
       {isLoading && <p>Waiting...</p>}
 
       {post && !isLoading && (
-        <div className='flex flex-col gap-y-2 hover:scale-[1.02] transition-all duration-200 cursor-pointer'>
+        <div className='flex flex-col gap-y-2'>
           <h2 className='font-extrabold text-white text-2xl lg:text-3xl'>
             {Tools.capitalizeFirstLetter(post.title)}
           </h2>
