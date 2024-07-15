@@ -1,9 +1,10 @@
+import { ClientLayout } from '@/layouts/ClientLayout';
 import clsx from 'clsx';
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={clsx(inter.className, 'min-h-dvh')}>{children}</body>
+      <body className={clsx(montserrat.className, 'min-h-dvh p-4')}>
+        <ClientLayout>{children}</ClientLayout>
+      </body>
     </html>
   );
 }
