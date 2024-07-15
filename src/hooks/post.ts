@@ -19,7 +19,7 @@ export const useGetSinglePost = (
   queryOptions?: UseQueryOptions<AxiosResponse<IPost>, AxiosError<IError>>
 ) => {
   return useQuery<AxiosResponse<IPost>, AxiosError<IError>>({
-    queryKey: ['posts'],
+    queryKey: ['post', data.params.postId],
     queryFn: () => postApi.getSinglePost(data),
     ...queryOptions,
   });
