@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={clsx(montserrat.className, 'min-h-dvh')}>
+      <body className={clsx(montserrat.className, 'min-h-dvh p-4')}>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
