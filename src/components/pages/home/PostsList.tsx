@@ -7,7 +7,7 @@ export const PostsList = () => {
   const { posts, isLoading } = usePostsList();
 
   return (
-    <section className='mt-12 flex flex-col gap-y-12'>
+    <section className='mt-12 flex flex-col gap-y-16'>
       {isLoading ? (
         <p>Waiting...</p>
       ) : (
