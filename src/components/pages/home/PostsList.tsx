@@ -9,7 +9,7 @@ export const PostsList = () => {
   return (
     <section className='mt-12 flex flex-col gap-y-16'>
       {isLoading ? (
-        <p>Waiting...</p>
+        <p className='text-gray-500 dark:text-secondary'>Waiting...</p>
       ) : (
         posts?.map((post) => <PostItem key={post.id} {...post} />)
       )}

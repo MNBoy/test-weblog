@@ -12,8 +12,13 @@ const config: Config = {
         primary: '#D7B5FC',
         secondary: '#E5E5E6',
       },
+      backgroundColor: {
+        primary: '#282C35',
+      },
     },
   },
+  darkMode: 'class',
+  important: true,
   plugins: [],
 };
 export default config;

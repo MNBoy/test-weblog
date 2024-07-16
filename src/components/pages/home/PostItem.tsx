@@ -13,8 +13,10 @@ export const PostItem: FC<IProps> = ({ body, id, title }) => {
         <h2 className='font-extrabold gradient-text text-2xl lg:text-3xl'>
           {Tools.capitalizeFirstLetter(title)}
         </h2>
-        <span className='text-xs text-secondary'>{Tools.createDate(id)}</span>
-        <p className='text-sm text-secondary'>
+        <span className='text-xs text-gray-500 dark:text-secondary'>
+          {Tools.createDate(id)}
+        </span>
+        <p className='text-sm text-gray-500 dark:text-secondary'>
           {body.slice(0, 60)} {body.length > 60 ? '...' : ''}
         </p>
       </div>
