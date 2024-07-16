@@ -1,10 +1,8 @@
+import { Navigation } from '@/components/common/Navigation';
 import { ClientLayout } from '@/layouts/ClientLayout';
 import clsx from 'clsx';
 import type { Metadata, Viewport } from 'next';
-import { Montserrat } from 'next/font/google';
 import './globals.css';
-
-const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -25,13 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={clsx(
-          montserrat.className,
-          'min-h-dvh max-w-screen-sm mx-auto py-10 px-4'
-        )}
-      >
-        <h1 className='text-2xl font-bold text-secondary'>overreacted</h1>
+      <body className={clsx('min-h-dvh max-w-screen-sm mx-auto py-10 px-4')}>
+        <Navigation />
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
