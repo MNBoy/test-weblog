@@ -4,6 +4,7 @@ Welcome to Test Project! This is a Next.js application powered by Next.js and in
 
 ## Table of Contents
 
+- [Live Demo](#live-demo)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -12,6 +13,9 @@ Welcome to Test Project! This is a Next.js application powered by Next.js and in
   - [Running Tests](#running-tests)
 - [Additional Commands](#additional-commands)
 - [Dependencies](#dependencies)
+
+## Live Demo
+Explore a live demo of the Test Project: [Live Demo](https://tenzu-weblog.vercel.app/)
 
 ## Getting Started
 
