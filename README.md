@@ -1,6 +1,6 @@
 # Test Project
 
-Welcome to Test Project! This is a Next.js application powered by React and integrated with various tools like React Query, Axios, Zustand, and Tailwind CSS. This README provides instructions on how to run and test the project.
+Welcome to Test Project! This is a Next.js application powered by Next.js and integrated with various tools like React Query, Axios, Zustand, and Tailwind CSS. This README provides instructions on how to run and test the project.
 
 ## Table of Contents
 
@@ -12,7 +12,6 @@ Welcome to Test Project! This is a Next.js application powered by React and inte
   - [Running Tests](#running-tests)
 - [Additional Commands](#additional-commands)
 - [Dependencies](#dependencies)
-- [License](#license)
 
 ## Getting Started
 
