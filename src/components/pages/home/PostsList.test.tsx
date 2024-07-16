@@ -38,10 +38,10 @@ describe('PostsList Component', () => {
 
     // Check if PostItem components are rendered
     const postItems = screen.getAllByRole('link'); // Assuming PostItem renders as an article
-    expect(postItems).toHaveLength(2); // Assuming 2 posts are mocked
+    expect(postItems).toHaveLength(2);
 
     // Check if the titles of posts are rendered
     const postTitles = screen.getAllByText(/Test Post/i);
-    expect(postTitles).toHaveLength(2); // Assuming 2 posts are mocked
+    expect(postTitles).toHaveLength(2);
   });
 });

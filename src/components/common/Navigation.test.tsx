@@ -12,7 +12,6 @@ describe('Navigation Component', () => {
     const titleElement = screen.getByText('overreacted');
     expect(titleElement).toBeInTheDocument();
 
-    // Adjust the name in the getByRole query to match the actual label
     const toggleElement = screen.getByRole('checkbox', { name: /Dark/i });
     expect(toggleElement).toBeInTheDocument();
   });
@@ -25,7 +24,6 @@ describe('Navigation Component', () => {
       'text-2xl font-bold transition-all duration-200 text-slate-700 dark:text-secondary'
     );
 
-    // Adjust the name in the getByRole query to match the actual label
     const toggleElement = screen.getByRole('checkbox', { name: /Dark/i });
     expect(toggleElement).toBeInTheDocument();
   });
