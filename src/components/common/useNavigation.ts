@@ -12,27 +12,33 @@ export const useNavigation = () => {
       (!('theme' in localStorage) &&
         window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
-      setTheme('dark');
-      document.body.classList.add('dark');
-      document.body.classList.add('bg-primary');
+      setThemeToDark();
     } else {
-      document.body.classList.remove('dark');
-      document.body.classList.remove('bg-primary');
-      setTheme('light');
+      setThemeToLight();
     }
   }, []);
+
+  const setThemeToLight = () => {
+    document.body.classList.remove('dark');
+    document.body.classList.remove('bg-primary');
+    localStorage.theme = 'light';
+    setTheme('light');
+  };
+
+  const setThemeToDark = () => {
+    document.body.classList.add('dark');
+    document.body.classList.add('bg-primary');
+    localStorage.theme = 'dark';
+    setTheme('dark');
+  };
 
   const toggleTheme = () => {
     isDark ? setTheme('light') : setTheme('dark');
 
     if (isDark) {
-      document.body.classList.remove('dark');
-      document.body.classList.remove('bg-primary');
-      localStorage.theme = 'light';
+      setThemeToLight();
     } else {
-      document.body.classList.add('dark');
-      document.body.classList.add('bg-primary');
-      localStorage.theme = 'dark';
+      setThemeToDark();
     }
   };
 
