@@ -1,7 +1,10 @@
 'use client';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import clsx from 'clsx';
+import { Montserrat } from 'next/font/google';
 import React, { FC } from 'react';
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -18,6 +21,8 @@ interface IProps {
 
 export const ClientLayout: FC<IProps> = ({ children }) => {
   return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <main className={clsx(montserrat.className)}>{children}</main>
+    </QueryClientProvider>
   );
 };
